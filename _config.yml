@@ -191,7 +191,7 @@ sidebar:
   - title: github
     href: //github.com/JarvisUSTC
     class: 'fab fa-github fa-fw'
-  - title: WuK # codeforces
+  - title: Jarvis # codeforces
     href: //leetcode-cn.com/u/jiu-ling-tong/
     class: 'fas fa-chart-bar fw'
   - title: csdn # vjudge
