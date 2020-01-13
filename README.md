@@ -1,112 +1,266 @@
-## Jasper2
+---
+layout: page
+title: 关于
+permalink: /about
+---
+## 开始
 
-[![Build Status](https://travis-ci.org/jekyller/jasper2.svg?branch=master)](https://travis-ci.org/jekyller/jasper2)
-[![Ruby](https://img.shields.io/badge/ruby-2.5.1-blue.svg?style=flat)](http://travis-ci.org/jekyller/jasper2)
-[![Jekyll](https://img.shields.io/badge/jekyll-3.7.4-blue.svg?style=flat)](http://travis-ci.org/jekyller/jasper2)
+1. Fork [wu-kan/wu-kan.github.io](https://github.com/wu-kan/wu-kan.github.io/fork)到你的仓库，并在设置里开启gh-pages
+2. 修改`_config.yml`为你自己的信息
+3. 删除`_post/`下的博文和`public/image/`文件夹下的图片，开始写你自己的文章
+4. 详细配置可以参见[这篇博文](https://wu-kan.github.io/posts/博客搭建/基于Jekyll搭建个人博客)
+5. 欢迎<a class="github-button" aria-label="Star wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true">Star</a><a class="github-button" aria-label="Fork wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io/fork" data-icon="octicon-repo-forked" data-show-count="true">Fork</a><a class="github-button" aria-label="Issue wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io/issues" data-icon="octicon-issue-opened" data-show-count="true">Issue</a>
 
-This is a full-featured port of Ghost's default theme [Casper](https://github.com/tryghost/casper)
-*v2.1.9* for [Jekyll](https://jekyllrb.com/) / [GitHub Pages](https://pages.github.com/).
+## 声明
 
-## Live Demo
+除特别声明或转载外，所有博文采用[署名-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)协议进行许可。
 
-[Ghost's Casper](https://demo.ghost.io) // [Jasper2](https://jekyller.github.io/jasper2)
+博客基于[MIT License](https://github.com/wu-kan/wu-kan.github.io/blob/master/LICENSE)开源于[GitHub](https://github.com/wu-kan/wu-kan.github.io)。
 
-![home page](https://raw.githubusercontent.com/jekyller/jasper2/master/assets/screenshot-desktop.jpg)
+## 致谢
 
+托管于[Github Pages](https://pages.github.com/)，感谢。
 
-## Features
+博客引擎来自于[jekyll/jekyll](https://github.com/jekyll/jekyll)，感谢。
 
-* Out of the box support for multiple authors (via `_data/authors.yml`)
-* Full author information including: picture, bio, website, twitter, facebook, etc.
-* Tag description(s) and personalised covers (via `_data/tags.yml`)
-* Related posts view at the bottom of each post
-* All Ghost default pages: Author page(s), Tag page(s), About page(s), 404, etc.
-* Pagination (infinite scrolling or standard pagination, i.e. posts across multiple pages)
-* Atom Feeds by [Jekyll-feed](https://github.com/jekyll/jekyll-feed)
-* Toggleable subscribe button (requires an external service)
-* Code Syntax Highlight with [highlight.js](https://highlightjs.org/)
-* Support for Google Analytics tracking
-* Support for Disqus comments (not Ghost standard)
+CDN加速服务来自于[jsdelivr](https://www.jsdelivr.com/)和<https://loli.net>，感谢。
 
+博客主题基于[poole/lanyon](https://github.com/poole/lanyon)，感谢。
 
-## Getting Started
+图标库来自于[<i class="fab fa-font-awesome"></i>fontawesome-free](https://fontawesome.com/)，感谢。
 
-### Deployment
+留言和阅读量系统来自于[Valine](https://valine.js.org/)和[LeanCloud](https://leancloud.cn/)，感谢。
 
-**Important:**  For security reasons, Github does not allow plugins (under `_plugins/`) when
-deploying with Github Pages. This means:
+页面统计来自于[不蒜子](http://busuanzi.ibruce.info/)，感谢。
 
-**1)** that we need to generate your site locally (more details below) and push the resulting
-HTML (the contents of `_site/` or `../jasper2-pages/`) to a Github repository, that GitHub Pages
-then host;
+博文目录插件来自于[ghiculescu/jekyll-table-of-contents](https://github.com/ghiculescu/jekyll-table-of-contents)，感谢。
 
-**2)** built the site with [travis-ci](https://travis-ci.org/) (with goodies from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis)) automatically pushing the
-generated HTML files to a *gh-pages* branch.
-This later approach is the one I am currently using to generate the live demo.
+博客搜索插件来自于[christian-fei/Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)，感谢。
 
-**3)** deploy the static website with Jekyll-compatible hosters, such as https://www.netlify.com/, that allow for deployment from the Github repo and publish the website using CDNs. Netlify has a free starter offer.
+代码高亮及插件来自于[PrismJS](https://prismjs.com/)，感谢。
 
-For option **1)** simply clone this repository (*master branch*), and then run
-`bundle exec jekyll serve` inside the directory. Upload the resulting `_site/` (or `../jasper2-pages/`)
-contents to your repository (*master branch* if uploading as your personal page
-(e.g. username.github.io) or *gh-pages branch* if uploading as a project page
-(as for the [demo](https://github.com/jekyller/jasper2/tree/gh-pages)).
+Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)，感谢。
 
-For option **2)** you will need to set up travis-ci for your personal fork. Briefly all you
-need then is to change your details in *[\_config.yml](_config.yml)* so that you can push
-to your github repo. You will also need to generate a secure key to add to your
-*[.travis.yml](.travis.yml)* (you can find more info on how to do it in that file).
-Also make sure you read the documentation from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis). This approach has clear
-advantages in that you simply push your file changes to GitHub and all the HTML files
-are generated for you and pushed to *gh-pages*. Also you get to know if everything is
-still fine with your site builds. Don't hesitate to contact me if you still have any
-issues (see below about issue tracking).
+头像翻转效果来自于[leopardpan/leopardpan.github.io](https://github.com/leopardpan/leopardpan.github.io)，感谢。
 
-### Author Pages
+壁纸来自于 pixiv id=71932901，感谢。
 
-In order to properly generate author pages you need to rename the field *author* in the
-front matter of every post to match that of your each author's *username* as defined
-in the *[\_data/authors.yml](_data/authors.yml)* file.
-With the latest update, multiple author blogs are now supported out of the box.
+## Feature/Todo
 
-### Compiling Styles
+从[这个页面](https://magical-girl.site/)得到的灵感，目标是博客上除了文章和作为导航的Live2D之外尽量不出现其他的模块。
 
-Following on the way Casper styles are compiled as [described here](https://github.com/tryghost/casper#development):
+- [x] 完成博客文章标签页
+- [ ] 完成博客文章分类页（分类暂时和标签没区别）
+- [ ] 重写博客首页，做一个有意思的封面
+- [x] 加入评论系统，暂时考虑用valine+leancloud实现
+  - [x] 基于valine的阅读量统计
+- [x] 不蒜子统计
+- [x] [<i class="fab fa-font-awesome"></i>fontawesome-free](https://fontawesome.com/)
+- [x] 全站搜索
+- [x] [ribbon动态背景](https://github.com/hustcc/ribbon.js)
+- [x] 调整代码块风格，并加上代码选中按钮
+- [x] 加入可以自动展开、标号的目录
+  - [x] 目录标号
+  - [ ] 自动展开
+- [x] mermaid
+  - [x] Markdown代码扩展
+- [x] $\KaTeX$
+- [x] Live2D
+  - [x] 加上切换Live2D显示/关闭的按钮
+  - [ ] 使用自己搭建的Live2D后端API
+    - [ ] 收集一些Live2D Model
 
-Jasper2 styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need Node and Gulp installed globally. After that, from the theme's root directory:
+## 初心
 
-```bash
-$ npm install
-$ gulp
-```
+我曾做什么？
 
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
+我正做什么？
 
-## Issues and Contributing
+我想做什么？
 
-This install builds well with Ruby v2.5.1 and Jekyll v3.7.4. If you run into any problems
-please log them on the [issue tracker](https://github.com/jekyller/jasper2/issues).
+我该做什么？
 
-Feel free pull-request your patches and fixes.
+> 章北海感到父亲的灵魂从冥冥中降落到飞船上，与他融为一体，他按动了操作界面上那个最后的按钮，心中默念出那个他用尽一生的努力所追求的指令：
+> > “‘自然选择’，前进四！”
 
-## Thanks
+## 历程
 
+### 正在进行 v2.4.1
 
-Many thanks to the Ghost team for all the design work. Also many thanks to all contributors,
-that help keeping the project alive and updated :smile:
+- [ ] 所有插件完全使用autoloader加载，参数通过函数传给js
+- [ ] katex行间公式（目前行间公式可通过MathJax实现，但是渲染性能不高）
+- [x] 没有背景感觉好单调，Ribbon默认开启回归（花 里 胡 哨
+- [x] 赞赏按钮样式更新
+- [x] 使用<https://loli.net>加速gravatar和google字体css，感谢~
+- [x] 网站字体更换为等宽字体+微软正黑体
+- [x] 更换爱酱壁纸，pixiv id=71932901
 
+### 2019.11.11 v2.4.0
 
-## Copyright & License
+- 修复`sidebar-overlay`失效的Bug
+- 修复赞助按钮点两次才出现的Bug
+- 修复mermaid不显示的Bug
+- 去掉正文部分的白色半透明背景
+- 动态背景增加nest粒子动画（花里胡哨，默认关闭
+- Ribbon动态背景默认关闭，可在配置文件中去掉注释打开（花 里 胡 哨
+- 博文显示信息增加tag
+- 变迁页面增加tag、categories图标及对应分类文章数量
+- 页面显示适应宽屏显示器
+- layout增加
+  - index
+  - tag
+  - page404
 
-Same licence as the one provided by Ghost's team. See Casper's theme [license](GHOST.txt).
+### 2019-08-30 v2.3.0
 
-Copyright (C) 2015-2018 - Released under the MIT License.
+- 更换cdn为[jsDelivr](https://www.jsdelivr.com/)
+- 升级fontaswsomev4.7.0至fontawesome-freev5.10.2，支持的图标数量由675增加至1535
+- 所有脚本和插件JSLoader化，增加移植性和访问速度
+- 界面调整
+  - 正文部分增加背景，从而减少动态ribbon背景影响的阅读体验
+  - sidebar微调
+- layout删除document页
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+### 2019-07-06 v2.2.1
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+- prismjs使用[UNPKG](https://unpkg.com)加速
+- 删去layout中的404页（因为只需要引入js脚本）
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+### 2019-06-28 v2.2.0
+
+- 博客结构微调
+- 将大部分博客用到的jscdn换成unpkg.com，感谢其提供的加速服务~
+- 留言板加入友链
+
+### 2019-05-03 v2.1.4
+
+- valine更新
+  - 现在支持记录访问者IP
+  - 每次重新拉取评论者头像
+
+### 2019-04-29 v2.1.3
+
+- 页面样式微调，将masthead调矮，将标题字号改小
+
+### 2019-03-20 v2.1.2
+
+- 修复sidebar展开时回到顶部的问题
+
+### 2019-03-18 v2.1.1
+
+- 一些界面上的小调整
+
+### 2019-03-01 v2.1.0
+
+- 调整某些插件
+- layout新增document页，一个只开启$\KaTeX$而不引入任何其他样式的页面，主要是方便自己生成可打印的ICPC模板和一些课程报告
+- layout新增404页，可选择开启腾讯公益
+- mermaid支持markdown扩展了
+
+### 2019-02-24 v2.0.1
+
+- sidebar的触发按钮样式换成了bars，原来的样式更像是菜单
+- 一点页面上的小调整
+
+### 2019-02-23 v2.0.0
+
+- 重构完成
+- 正式开源
+
+### 2019-02-19
+
+- 模块化·初步
+- 博客搜索实现
+
+### 2019-02-01
+
+- [署名-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)。
+- 社会主义核心价值观点击特效，感谢[dujin](https://www.dujin.org/9088.html)。
+- 打赏。
+
+### 2019-01-31
+
+- mathjax换katex
+- post访问量统计
+
+### 2019-01-24
+
+- 代码高亮
+- 选中代码按钮
+- 代码语言按钮
+
+### 2019-01-23
+
+- 加入文章目录到SideBar
+
+### 2019-01-22
+
+- 加入Ribbon动态背景
+
+### 2019-01-21
+
+- 加入valine评论系统，留言页实现
+
+### 2019-01-20
+
+- 加入归档页
+
+### 2019-01-19
+
+- 加入标签页
+
+### 2019-01-18
+
+- 开始用Jekyll重构整个博客
+
+折腾吧，折腾是才最好玩的。
+
+### 2019-01-13
+
+- 更换Next.Muse主题模板
+- 少量修改页面自定义样式布局，主要是sidebar
+- 将网易云音乐iframe移动到description，感觉挺有意思的
+
+### 2019-01-12
+
+- 将NexT版本更新至v6.7.0
+
+### 2018-12-23
+
+- 页面字体修改
+- 网易云音乐iframe加入SideBar
+
+### 2018-12-16
+
+- 引入mermaid支持
+- 修复部分Latex渲染的Bug
+
+### 2018-11-24
+
+- 将NexT版本更新至v6.5.0
+- 用Valine更换失效的Gitment评论系统
+- 加入Leancloud和busuanzi页面统计
+
+### 2018-11-20
+
+- 谷歌，百度搜索页面提交
+
+### 2018-11-18
+
+- 全局透明化
+- 动态背景
+- 页面加载动画
+- Latex支持
+
+### 2018-11-16
+
+- 主题由默认的Landspace换至NexT v5.1.4
+- 使用Next.Pisces主题模板
+- 开始对网页进行自定义样式布局
+- 尝试加入Gitment，但初始化总是不成功
+
+### 2018-11-15
+
+- 在Github上成功部署博客
+- 成功迁移[原CSDN博客](https://blog.csdn.net/w_weilan)上的所有文章
+- live2d
