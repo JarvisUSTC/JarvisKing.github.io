@@ -1,4 +1,4 @@
-markdown: kramdown
+markdown: markdown
 kramdown:
   input: GFM # Github Flavored Markdown
   math_engine: latex # 防止行间公式渲染错误
